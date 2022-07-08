@@ -1,0 +1,12 @@
+.text {
+	margin-left: 40%;
+	text-align: center;
+	width: 300px;
+	height: auto;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.nonbold {
+	font-weight: 300;
+}
