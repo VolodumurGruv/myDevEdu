@@ -3,13 +3,13 @@
 const user = "Kate Smith";
 const rate = 10;
 const isOnline = true;
-const placeFrom = "London is my city";
+const userFrom = "London is my city";
 
 console.log(
-	`user: ${user}\nrate: ${rate}\n\isOnline: ${isOnline}\nplaceFrom: ${placeFrom}`
+	`user: ${user}\nrate: ${rate}\n\isOnline: ${isOnline}\nplaceFrom: ${userFrom}`
 );
 console.log(
-	`user: ${user}, rate: ${rate}, isOnline: ${isOnline}, placeFrom: ${placeFrom}`
+	`user: ${user}, rate: ${rate}, isOnline: ${isOnline}, placeFrom: ${userFrom}`
 );
 
 // task 3
