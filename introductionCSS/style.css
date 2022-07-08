@@ -1,0 +1,109 @@
+.warning {
+	padding: 10px;
+	background-color: #fff3d9;
+}
+
+.square {
+	width: 150px;
+	height: 150px;
+	background-color: green;
+}
+
+.circle {
+	margin-top: 20px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: yellow;
+}
+
+.item {
+}
+
+.anim {
+	position: relative;
+	top: 0;
+	left: calc(100% - 250px);
+	width: 250px;
+	height: 250px;
+	background-color: orange;
+	animation: anim 5s ease-in-out infinite;
+}
+
+.cadr {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 250px;
+	background-color: orange;
+	animation: cadr 5s ease-in infinite;
+}
+
+@keyframes anim {
+	0% {
+		top: 0;
+		left: calc(100% - 250px);
+		background-color: orange;
+	}
+	25% {
+		top: 0;
+		left: calc(50% - 250px);
+		background-color: rgb(197, 129, 2);
+		border-radius: 50%;
+	}
+	50% {
+		top: 250px;
+		left: calc(50% - 250px);
+		background-color: rgb(131, 85, 1);
+	}
+	75% {
+		top: 250px;
+		left: calc(100% - 250px);
+		background-color: rgb(131, 27, 1);
+		border-radius: 50%;
+	}
+}
+
+@keyframes cadr {
+	0% {
+		top: 0;
+		left: 0;
+		background-color: orange;
+	}
+	12.5% {
+		top: 0;
+		left: 83px;
+		background-color: orange;
+	}
+	25% {
+		top: 0;
+		left: 166px;
+		background-color: orange;
+	}
+	37.5% {
+		top: 0;
+		left: 250px;
+		background-color: orange;
+	}
+	50% {
+		top: 250px;
+		left: 250px;
+		background-color: orange;
+	}
+	62.5% {
+		top: 250px;
+		left: 125px;
+		background-color: orange;
+	}
+	75% {
+		top: 250px;
+		left: 63px;
+		background-color: orange;
+	}
+	87.5% {
+		top: 250px;
+		left: 0px;
+		background-color: orange;
+	}
+}
