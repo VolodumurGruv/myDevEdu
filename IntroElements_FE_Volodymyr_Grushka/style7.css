@@ -1,0 +1,63 @@
+table {
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+.table7-1 td:nth-child(1),
+.table7-1 th:nth-child(1) {
+	width: 150px;
+	text-align: start;
+	font-weight: bold;
+	padding: 20px 60px 20px 20px;
+	color: beige;
+	background-color: rgba(0, 153, 255, 0.616);
+}
+
+.table7-1 th {
+	background-color: rgba(0, 153, 255, 0.616);
+	color: beige;
+}
+
+.table7-1 td {
+	text-align: center;
+	padding: 20px 40px;
+	background-color: rgba(131, 231, 245, 0.616);
+}
+
+/* table 7.2 */
+
+.table7-2 {
+	margin-top: 30px;
+}
+
+.table7-2 th {
+	padding: 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: rgba(164, 105, 167, 0.616);
+}
+
+.table7-2 td {
+	padding: 20px 40px;
+	background-color: rgba(164, 105, 167, 0.616);
+}
+
+.table7-2 td[scope="top-rounded"] {
+	border-top-left-radius: 10px;
+}
+
+.table7-2 th[scope="bgwhite"] {
+	background-color: #fff;
+}
+
+.table7-2 th:nth-child(1),
+.table7-2 td:nth-child(1) {
+	width: 150px;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.table7-2 td:nth-child(2n),
+.table7-2 th:nth-child(2n) {
+	background-color: rgba(214, 163, 21, 0.671);
+}
