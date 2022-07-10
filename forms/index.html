@@ -23,21 +23,31 @@
 	</head>
 	<body>
 		<form action="#">
-			<label for="userName">Name</label>
-			<input
-				type="text"
-				id="userName"
-				autofocus
-				tabindex="0"
-				required
-				maxlength="30"
-			/>
-			<label for="email">Email</label>
-			<input type="email" name="" id="email" maxlength="30" required />
-			<label for="phone">Phonw number</label>
-			<input type="tel" id="phone" required />
-			<label for="pass">Password</label>
-			<input type="password" id="pass" required />
+			<div>
+				<label for="userName">Name</label>
+				<input
+					type="text"
+					id="userName"
+					autofocus
+					tabindex="0"
+					required
+					maxlength="30"
+				/>
+			</div>
+			<div>
+				<label for="email">Email</label>
+				<input type="email" name="" id="email" maxlength="30" required />
+			</div>
+			<div>
+				<label for="phone">Phonw number</label>
+				<input type="tel" id="phone" required />
+			</div>
+
+			<div>
+				<label for="pass">Password</label>
+				<input type="password" id="pass" required />
+			</div>
+
 			<div>
 				<label for="age">Age</label>
 				<select name="" id="age">
@@ -70,13 +80,16 @@
 				<input type="radio" id="Odesa" name="city" />
 				<label for="Odesa">Odesa</label>
 			</div>
-			<textarea
-				style="margin: 20px 0"
-				name=""
-				id="coments"
-				cols="20"
-				rows="5"
-			></textarea>
+			<div>
+				<textarea
+					style="margin: 20px 0"
+					name=""
+					id="coments"
+					cols="20"
+					rows="5"
+				></textarea>
+			</div>
+
 			<div>
 				<label for="agree">Are you agree with rules</label>
 				<input id="agree" type="checkbox" />
