@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			form {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			input,
+			select {
+				font-size: 18px;
+				margin-bottom: 20px;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#">
+			<label for="userName">Name</label>
+			<input type="text" id="userName" required maxlength="30" />
+			<label for="email">Email</label>
+			<input type="email" name="" id="email" maxlength="30" required />
+			<label for="phone">Phonw number</label>
+			<input type="tel" id="phone" required />
+			<label for="pass">Password</label>
+			<input type="password" id="pass" required />
+			<div>
+				<label for="age">Age</label>
+				<select name="" id="age">
+					<option value="0-25">0-25</option>
+					<option value="26-40">26-40</option>
+					<option value="41-55">41-55</option>
+					<option value="56-99">56-99</option>
+				</select>
+			</div>
+			<div>
+				<label for="car">Car</label>
+				<select name="" id="car">
+					<option value="audi">Audi</option>
+					<option value="bmw">BMW</option>
+					<option value="ford">Ford</option>
+				</select>
+			</div>
+			<div>
+				<p>Range: <span id="range-value"></span></p>
+				<input type="range" id="range" value="20" />
+			</div>
+
+			<div class="cities">
+				<input type="radio" id="Kyiv" name="city" />
+				<label for="Kyiv">Kyiv</label>
+				<input type="radio" id="Dnepr" name="city" />
+				<label for="Dnepr">Dnepr</label>
+				<input type="radio" id="Lviv" name="city" />
+				<label for="Lviv">Lviv</label>
+				<input type="radio" id="Odesa" name="city" />
+				<label for="Odesa">Odesa</label>
+			</div>
+			<textarea
+				style="margin: 20px 0"
+				name=""
+				id="coments"
+				cols="20"
+				rows="5"
+			></textarea>
+			<div>
+				<label for="agree">Are you agree with rules</label>
+				<input id="agree" type="checkbox" />
+				<a href="#">Watch rules</a>
+			</div>
+			<div style="display: inline">
+				<input style="margin-right: 10px" type="submit" />
+				<input type="reset" id="reset" />
+			</div>
+		</form>
+
+		<script>
+			const range = document.querySelector("#range");
+			const rangeValue = document.querySelector("#range-value");
+			const reset = document.querySelector("#reset");
+			const defaultRange = range.value;
+
+			rangeValue.innerText = range.value;
+
+			range.addEventListener("change", () => {
+				rangeValue.innerText = range.value;
+			});
+
+			reset.addEventListener("click", (event) => {
+				event.stopPropagation();
+				rangeValue.innerText = defaultRange;
+			});
+		</script>
+	</body>
+</html>
