@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
+			h2 {
+				text-align: center;
+			}
 			form {
 				display: flex;
 				flex-direction: column;
@@ -22,7 +25,8 @@
 		</style>
 	</head>
 	<body>
-		<form action="#">
+		<h2>Form</h2>
+		<form action="#/handle.php" method="POST">
 			<div>
 				<label for="userName">Name</label>
 				<input
@@ -39,7 +43,7 @@
 				<input type="email" name="" id="email" maxlength="30" required />
 			</div>
 			<div>
-				<label for="phone">Phonw number</label>
+				<label for="phone">Phone number</label>
 				<input type="tel" id="phone" required />
 			</div>
 
@@ -71,23 +75,19 @@
 			</div>
 
 			<div class="cities">
-				<input type="radio" id="Kyiv" name="city" />
+				<h3>City</h3>
+				<input type="radio" id="Kyiv" name="city" value="Kyiv" />
 				<label for="Kyiv">Kyiv</label>
-				<input type="radio" id="Dnepr" name="city" />
+				<input type="radio" id="Dnepr" name="city" value="Dnepr" />
 				<label for="Dnepr">Dnepr</label>
-				<input type="radio" id="Lviv" name="city" />
+				<input type="radio" id="Lviv" name="city" value="Lviv" />
 				<label for="Lviv">Lviv</label>
-				<input type="radio" id="Odesa" name="city" />
+				<input type="radio" id="Odesa" name="city" value="Odesa" />
 				<label for="Odesa">Odesa</label>
 			</div>
 			<div>
-				<textarea
-					style="margin: 20px 0"
-					name=""
-					id="coments"
-					cols="20"
-					rows="5"
-				></textarea>
+				<label for="coments" style="display: block">Coments: </label>
+				<textarea style="margin: 20px 0" id="coments" cols="20" rows="5"></textarea>
 			</div>
 
 			<div>
