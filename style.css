@@ -45,8 +45,33 @@
 	justify-content: space-around;
 	align-items: center;
 	width: 100%;
+	padding: 60px 10px;
+	background-color: #0d0d0d;
+}
 
-	background-color: rgba(128, 128, 128, 0.3);
+.footer__link {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer__link:hover {
+	border-bottom: 2px solid #fff;
+}
+
+.footer__line {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #fff;
+}
+
+.copyright {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	margin-bottom: 15px;
+	color: #fff;
 }
 
 .main {
