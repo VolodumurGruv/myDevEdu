@@ -1,3 +1,5 @@
+"use strict";
+
 const obj = {
 	name: "Jim",
 	age: 77,
@@ -34,6 +36,17 @@ newObj.simpleFun = () => {
 newObj.simpleFun();
 
 Object.freeze(newObj);
+
+newObj.id = 2;
+newObj.surname = "Bob";
+
+console.log(newObj);
+
+console.log("surname" in newObj);
+
+for (const key in newObj) {
+	Object.defineProperty(newObj, key, { writable: false });
+}
 
 newObj.id = 2;
 newObj.surname = "Bob";
