@@ -25,7 +25,7 @@ function passArgs() {
 	return this.a;
 }
 
-console.log(sum.call(passArgs, 5, 10));
+console.log(passArgs.call(sum, 5, 10));
 
 function mult() {
 	const first = Array.prototype.slice.apply(arguments, [0]);
