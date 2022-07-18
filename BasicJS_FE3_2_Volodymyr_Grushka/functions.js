@@ -1,32 +1,20 @@
 "use strict";
-const carInfo = {
-	car: "audi",
-	model: 8,
 
-	getData() {
-		console.log(this.car);
-	},
-};
-
-function countryUsed(country) {
-	if (this.car) {
-		return { car: this.car, model: this.model, country };
-	} else {
-		return "no data";
+function numToStr(num) {
+	if (!isNaN(num)) {
+		return num >= 0 && num <= 999e12 ? num.toString() : "";
 	}
+	return "it's not a number";
 }
 
-const ua = countryUsed.apply(carInfo, ["UA"]);
+console.log(numToStr(100));
 
-console.log(ua);
+function strToNum(str) {
+	if (!isNaN(+str)) {
+		return +str;
+	}
+	return "it's not a number";
+}
 
-carInfo.getData();
-
-const carCountry = {
-	country: "new york",
-	car: "BMW",
-};
-
-carCountry.getData = carInfo.getData;
-
-carCountry.getData();
+console.log(strToNum("1a23"));
+console.log(999e12);
