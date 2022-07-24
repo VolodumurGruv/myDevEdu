@@ -11,55 +11,28 @@
 }
 
 .colors {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
 	padding: 5px;
 	width: 60px;
 	border: 1px solid black;
 	box-shadow: 2px 2px 2px black;
 }
 
-.black,
-.red,
-.green,
-.blue,
-.yellow,
-.white {
-	width: 25px;
-	height: 25px;
-	margin: 2px;
-	border: 1px dotted black;
+.color {
+	width: 60px;
+	height: 60px;
+	border: 1px solid black;
 }
 
-.black {
-	background-color: black;
-}
-
-.red {
-	background-color: red;
-}
-
-.blue {
-	background-color: blue;
-}
-
-.green {
-	background-color: green;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-.white {
-	background-color: white;
+#r,
+#g,
+#b {
+	width: 60px;
 }
 
 .brush {
 	margin-top: 10px;
 	border: 1px solid black;
-	box-shadow: 2px 2px 2px black;
+	box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 .circle,
