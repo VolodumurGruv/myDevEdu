@@ -7,8 +7,12 @@ const brushShape = document.querySelector(".brush");
 const width = document.querySelector(".horizontal");
 const height = document.querySelector(".vertical");
 
+// default
 let shape = "square";
 
+r.value = 0;
+g.value = 0;
+b.value = 0;
 width.max = 100;
 width.min = 1;
 height.max = 100;
