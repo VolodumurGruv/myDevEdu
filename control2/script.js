@@ -2,23 +2,29 @@
 const hoverBtn = document.querySelector(".hoverButton");
 const hoveredResult = document.querySelector(".hoverResult");
 const colors = ["red", "blue", "green", "orange", "purple"];
-let counter = 0;
 
-hoverBtn.addEventListener("mouseover", (event) => {
+let stepHover = araySteper();
+
+hoverBtn.addEventListener("mouseover", () => {
 	const li = document.createElement("li");
 
-	li.style.color = araySteper(colors);
+	li.style.color = stepHover(colors);
 	li.textContent = "Hovered";
 
 	hoveredResult.appendChild(li);
 });
 
-function araySteper(arr) {
-	if (counter > arr.length - 1) {
-		counter = 0;
-	}
-	console.log(counter);
-	return arr[counter++];
+function araySteper() {
+	let counter = 0;
+
+	return (arr) => {
+		if (counter > arr.length - 1) {
+			console.log(counter);
+			return (counter = 0);
+		}
+		console.log(counter);
+		return arr[counter++];
+	};
 }
 
 // second task
@@ -28,11 +34,15 @@ const clickResult = document.querySelector(".clickResult");
 const deleteQueue = ["six", "two", "three", "four", "one", "five"];
 const addingQueue = ["one", "two", "three", "four", "five", "six"];
 
+let stepClick = araySteper();
+
 clickBtn.addEventListener("click", () => {
-	if (Object.values(clickResult.classList).includes(deleteQueue[counter])) {
-		clickResult.classList.remove(araySteper(deleteQueue));
-	} else {
-		clickResult.classList.add(araySteper(addingQueue));
+	clickResult.classList.remove(stepClick(deleteQueue));
+	if (clickResult.classList.length === 1) {
+		for (let i = 0; i < addingQueue.length; i++) {
+			console.log(clickResult.classList);
+			clickResult.classList.add(stepClick(addingQueue));
+		}
 	}
 });
 
@@ -42,8 +52,10 @@ const lightBtn = document.querySelector(".lightButton");
 const lightResult = document.querySelector(".lightResult");
 const traficLight = ["red", "yellow", "green", ""];
 
+let stepLight = araySteper();
+
 lightBtn.addEventListener("click", () => {
-	lightResult.style.color = araySteper(traficLight);
+	lightResult.style.color = stepLight(traficLight);
 
 	lightResult.textContent = "some text";
 });
