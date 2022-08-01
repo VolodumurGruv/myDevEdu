@@ -1,15 +1,16 @@
 .container {
 	display: flex;
 	align-items: center;
-	width: 100vh;
-	margin-left: 20px;
+	width: 100%;
+	border-bottom: 4px solid #000;
+	height: 205px;
 }
 
 .dino-sprite {
-	height: 120px;
-	width: 95px;
+	height: 110px;
+	width: 115px;
 	background: url(./dino.png) 0px 0px;
-	animation: play 0.8s steps(8) infinite, steps 10s linear infinite;
+	animation: play 0.5s steps(8) infinite, steps 5s linear infinite;
 	position: absolute;
 	left: 0;
 	top: 100px;
@@ -17,12 +18,62 @@
 
 @keyframes play {
 	100% {
-		background-position: -1140px;
+		background-position: -1366px;
 	}
 }
 
 @keyframes steps {
 	100% {
 		left: 100%;
+	}
+}
+
+.cactus1,
+.cactus2,
+.cactus3 {
+	position: absolute;
+	top: 170px;
+	width: 20px;
+	height: 40px;
+	background-image: url(./cactus.png);
+	background-size: 20px 40px;
+	z-index: 100;
+}
+
+.cactus1 {
+	left: 250px;
+}
+
+.cactus2 {
+	left: 550px;
+}
+
+.cactus3 {
+	left: 750px;
+}
+
+.jump {
+	animation: jump 0.6s linear;
+}
+
+@keyframes jump {
+	0% {
+		top: 100px;
+	}
+
+	30% {
+		top: 70px;
+	}
+
+	50% {
+		top: 50px;
+	}
+
+	80% {
+		top: 70px;
+	}
+
+	100% {
+		top: 100px;
 	}
 }
