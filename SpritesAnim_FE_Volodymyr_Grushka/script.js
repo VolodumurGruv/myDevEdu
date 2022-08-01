@@ -11,13 +11,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 function jump() {
-	// if (dino.classList !== "jump") {
-	// 	dino.classList.add("jump");
-	// 	console.dir(dino.classList);
-
-	// 	console.log(dino.classList);
-	// }
-	// setTimeout(() => dino.classList.remove("jump"), 300);
 	dino.animate(
 		[
 			{ transform: "translate3D(0, 0, 0)" },
@@ -27,29 +20,46 @@ function jump() {
 		{
 			duration: 600,
 			easing: "linear",
+			fill: "both",
 		}
 	);
+	console.log(window.innerWidth);
 }
 
-function isAlive() {
-	const cactus1Pos = parseInt(
-		window.getComputedStyle(cactus1).getPropertyValue("left")
-	);
-	const cactus2Pos = parseInt(
-		window.getComputedStyle(cactus2).getPropertyValue("left")
-	);
-	const cactus3Pos = parseInt(
-		window.getComputedStyle(cactus3).getPropertyValue("left")
-	);
-}
+const cactus1Pos = cactus1.getBoundingClientRect().left;
+const cactus2Pos = cactus2.getBoundingClientRect().left;
+const cactus3Pos = cactus3.getBoundingClientRect().left;
 
-setInterval(() => {
-	const dinoLeft = parseInt(
-		window.getComputedStyle(dino).getPropertyValue("left")
-	);
-	const dinoTop = parseInt(
-		window.getComputedStyle(dino).getPropertyValue("top")
-	);
-	// як отримати  dinoTop при застосуванні dino.animate(...)?
-	console.log(dinoTop);
+const windowWith = window.innerWidth;
+let isSurvive = true;
+
+const dinoIterval = setInterval(() => {
+	const dinoLeft = parseInt(dino.getBoundingClientRect().left);
+	const dinoTop = parseInt(dino.getBoundingClientRect().top);
+
+	if (dinoTop === 100 && dinoLeft >= 230 && dinoLeft < 250) {
+		isSurvive = false;
+
+		alert("GAME OVER");
+	}
+
+	if (dinoTop === 100 && dinoLeft >= 530 && dinoLeft < 550) {
+		isSurvive = false;
+
+		alert("GAME OVER");
+	}
+
+	if (dinoTop === 100 && dinoLeft >= 730 && dinoLeft < 750) {
+		isSurvive = false;
+
+		alert("GAME OVER");
+	}
+
+	if (dinoLeft >= windowWith - 20 && isSurvive) {
+		isSurvive = true;
+
+		alert("YOU WIN!!!");
+
+		document.location.reload();
+	}
 }, 10);
