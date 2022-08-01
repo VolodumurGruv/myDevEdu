@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	align-items: center;
+	width: 100vh;
+}
+
+.sprite-anim {
+	height: 123px;
+	width: 70px;
+	background: url(./anim/smurf-sprite.png) 0px 0px;
+	animation: play 0.8s steps(16) infinite, steps 10s linear infinite;
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+
+@keyframes play {
+	100% {
+		background-position: -1135px;
+	}
+}
+
+@keyframes steps {
+	100% {
+		left: 100%;
+	}
+}

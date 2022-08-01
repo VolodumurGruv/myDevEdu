@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	align-items: center;
+	width: 100vh;
+	margin-left: 20px;
+}
+
+.dino-sprite {
+	height: 120px;
+	width: 95px;
+	background: url(./dino.png) 0px 0px;
+	animation: play 0.8s steps(8) infinite, steps 10s linear infinite;
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+
+@keyframes play {
+	100% {
+		background-position: -1140px;
+	}
+}
+
+@keyframes steps {
+	100% {
+		left: 100%;
+	}
+}
