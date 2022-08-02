@@ -41,18 +41,21 @@ const dinoIterval = setInterval(() => {
 		isSurvive = false;
 
 		alert("GAME OVER");
+		document.location.reload();
 	}
 
 	if (dinoTop === 100 && dinoLeft >= 530 && dinoLeft < 550) {
 		isSurvive = false;
 
 		alert("GAME OVER");
+		document.location.reload();
 	}
 
 	if (dinoTop === 100 && dinoLeft >= 730 && dinoLeft < 750) {
 		isSurvive = false;
 
 		alert("GAME OVER");
+		document.location.reload();
 	}
 
 	if (dinoLeft >= windowWith - 20 && isSurvive) {

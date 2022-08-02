@@ -10,7 +10,7 @@
 	height: 110px;
 	width: 115px;
 	background: url(./dino.png) 0px 0px;
-	animation: play 0.5s steps(8) 0.5s infinite, steps 5s linear 0.5s infinite;
+	animation: play 0.5s steps(8) 1s infinite, steps 5s linear 1s infinite;
 	position: absolute;
 	left: 0;
 	top: 100px;
